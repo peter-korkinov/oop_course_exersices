@@ -1,4 +1,4 @@
-from project.task import Task
+from MovieWorld.task import Task
 
 
 class Section:
