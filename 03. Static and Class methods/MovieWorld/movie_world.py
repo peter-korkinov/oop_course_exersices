@@ -67,7 +67,3 @@ class MovieWorld:
     @classmethod
     def customer_capacity(cls):
         return cls._customer_capacity
-
-
-pesh = Customer('pesho', 18, 1)
-print(pesh)
