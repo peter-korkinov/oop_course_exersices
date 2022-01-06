@@ -34,7 +34,7 @@ class MovieWorld:
             return f'{customer.name} has already rented {dvd.name}'
 
         if dvd.is_rented:
-            return 'DVD already rented'
+            return 'DVD is already rented'
 
         if dvd.age_restriction > customer.age:
             return f'{customer.name} should be at least {dvd.age_restriction} to rent this movie'
@@ -67,3 +67,7 @@ class MovieWorld:
     @classmethod
     def customer_capacity(cls):
         return cls._customer_capacity
+
+
+pesh = Customer('pesho', 18, 1)
+print(pesh)
