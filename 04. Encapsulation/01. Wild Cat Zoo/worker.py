@@ -16,10 +16,9 @@ class Worker(ABC):
 
     @name.setter
     def name(self, value):
-        if type(value) is str:
-            self.__name = value
-        else:
+        if type(value) is not str:
             raise TypeError('name must be a string')
+        self.__name = value
 
     @property
     def age(self):
@@ -27,13 +26,11 @@ class Worker(ABC):
 
     @age.setter
     def age(self, value):
-        if type(value) is int:
-            if 0 < value < 150:
-                self.__age = value
-            else:
-                raise ValueError('age must be between 0 and 150')
-        else:
+        if type(value) is not int:
             raise TypeError('age must be an integer number')
+        if 0 > value > 150:
+            raise ValueError('age must be between 0 and 150')
+        self.__age = value
 
     @property
     def salary(self):
@@ -41,10 +38,8 @@ class Worker(ABC):
 
     @salary.setter
     def salary(self, value):
-        if type(value) is int:
-            if value > 0:
-                self.__salary = value
-            else:
-                raise ValueError('salary must be a positive number')
-        else:
+        if type(value) is not int:
             raise TypeError('Salary must be an integer number')
+        if value <= 0:
+            raise ValueError('salary must be a positive number')
+        self.__salary = value
