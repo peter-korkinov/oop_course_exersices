@@ -25,27 +25,27 @@ class Storage:
             self.__documents.append(document)
 
     def edit_category(self, category_id: int, new_name: str):
-        Storage.get_record(category_id, self.__categories).name = new_name
+        Storage.__get_record(category_id, self.__categories, 'category').name = new_name
 
     def edit_topic(self, topic_id: int, new_topic: str, new_folder: str,):
-        topic = Storage.get_record(topic_id, self.__topics)
+        topic = Storage.__get_record(topic_id, self.__topics, 'topic')
         topic.topic = new_topic
         topic.storage_folder = new_folder
 
     def edit_document(self, document_id: int, new_file_name: str):
-        Storage.get_record(document_id, self.__documents).file_name = new_file_name
+        Storage.__get_record(document_id, self.__documents, 'document').file_name = new_file_name
 
-    def delete_category(self, category_id):
-        self.__categories.remove(Storage.get_record(category_id, self.__categories))
+    def delete_category(self, category_id: int):
+        self.__categories.remove(Storage.__get_record(category_id, self.__categories, 'category'))
 
-    def delete_topic(self, topic_id):
-        self.__topics.remove(Storage.get_record(topic_id, self.__topics))
+    def delete_topic(self, topic_id: int):
+        self.__topics.remove(Storage.__get_record(topic_id, self.__topics, 'topic'))
 
-    def delete_document(self, document_id):
-        self.__documents.remove(Storage.get_record(document_id, self.__documents))
+    def delete_document(self, document_id: int):
+        self.__documents.remove(Storage.__get_record(document_id, self.__documents, 'document'))
 
-    def get_document(self, document_id):
-        return Storage.get_record(document_id, self.__documents)
+    def get_document(self, document_id: int):
+        return Storage.__get_record(document_id, self.__documents, 'document')
 
     @property
     def categories(self):
@@ -60,9 +60,9 @@ class Storage:
         return self.__documents
 
     @staticmethod
-    def get_record(rec_id, target_attr):
+    def __get_record(rec_id: int, target_attr, target_attr_name: str):
         for rec in target_attr:
             if rec.id == rec_id:
                 return rec
 
-        raise ValueError('searched item does not exist')
+        raise ValueError(f'{target_attr_name} with id {rec_id} does not exist')
