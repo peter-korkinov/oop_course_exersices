@@ -1,4 +1,4 @@
-from WildCatZoo.worker import Worker
+from WildCatZoo.project.worker import Worker
 
 
 class Keeper(Worker):

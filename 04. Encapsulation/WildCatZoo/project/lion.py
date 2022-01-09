@@ -1,4 +1,4 @@
-from .animal import Animal
+from WildCatZoo.project.animal import Animal
 
 
 class Lion(Animal):
