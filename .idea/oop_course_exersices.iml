@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/02. Classes and Instances" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03. Static and Class methods" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/04. Encapsulation" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/10. Testing/01. Mammal/mammal" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/10. Testing/02. Vehicle/vehicle" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
