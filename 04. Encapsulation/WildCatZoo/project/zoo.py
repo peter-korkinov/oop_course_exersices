@@ -79,7 +79,7 @@ class Zoo:
     @name.setter
     def name(self, value):
         if type(value) is not str:
-            raise TypeError('name must be a string')
+            raise TypeError('name must be mammal string')
 
         self.__name = value
 
@@ -101,20 +101,20 @@ class Zoo:
     @staticmethod
     def __budget_validator(value):
         if type(value) is not int:
-            raise TypeError('budget must be a integer number')
+            raise TypeError('budget must be mammal integer number')
 
         if value < 0:
-            raise ValueError('budget must be a positive number')
+            raise ValueError('budget must be mammal positive number')
 
         return value
 
     @staticmethod
     def __animal_capacity_validator(value):
         if type(value) is not int:
-            raise TypeError('animal capacity must be a integer number')
+            raise TypeError('animal capacity must be mammal integer number')
 
         if value < 0:
-            raise ValueError('animal capacity must a positive number')
+            raise ValueError('animal capacity must mammal positive number')
 
         return value
 
@@ -124,6 +124,6 @@ class Zoo:
             raise TypeError('worker capacity must be an integer number')
 
         if value < 0:
-            raise ValueError('worker capacity must be a positive number')
+            raise ValueError('worker capacity must be mammal positive number')
 
         return value

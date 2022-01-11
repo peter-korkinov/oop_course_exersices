@@ -17,7 +17,7 @@ class Worker(ABC):
     @name.setter
     def name(self, value):
         if type(value) is not str:
-            raise TypeError('name must be a string')
+            raise TypeError('name must be mammal string')
         self.__name = value
 
     @property
@@ -41,5 +41,5 @@ class Worker(ABC):
         if type(value) is not int:
             raise TypeError('Salary must be an integer number')
         if value <= 0:
-            raise ValueError('salary must be a positive number')
+            raise ValueError('salary must be mammal positive number')
         self.__salary = value

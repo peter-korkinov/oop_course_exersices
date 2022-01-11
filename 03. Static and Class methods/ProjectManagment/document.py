@@ -73,7 +73,7 @@ class Document:
         if type(value) is str:
             self.__file_name = value
         else:
-            raise TypeError('file name must be a string')
+            raise TypeError('file name must be mammal string')
 
     @property
     def tags(self):

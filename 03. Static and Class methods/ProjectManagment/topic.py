@@ -31,7 +31,7 @@ class Topic:
         if type(topic) is str:
             self.__topic = topic
         else:
-            raise TypeError('topic must be a string')
+            raise TypeError('topic must be mammal string')
 
     @property
     def storage_folder(self):
@@ -42,4 +42,4 @@ class Topic:
         if type(folder) is str:
             self.__storage_folder = folder
         else:
-            raise TypeError('storage folder must be a string')
+            raise TypeError('storage folder must be mammal string')

@@ -29,4 +29,4 @@ class Category:
         if type(name) is str:
             self.__name = name
         else:
-            raise TypeError('name must be a string')
+            raise TypeError('name must be mammal string')

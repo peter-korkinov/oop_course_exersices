@@ -18,7 +18,7 @@ class Animal(ABC):
     @name.setter
     def name(self, value):
         if type(value) is not str:
-            raise TypeError('name must be a string')
+            raise TypeError('name must be mammal string')
         self.__name = value
 
     @property
@@ -28,7 +28,7 @@ class Animal(ABC):
     @gender.setter
     def gender(self, value):
         if type(value) is not str:
-            raise TypeError('gender must be a string')
+            raise TypeError('gender must be mammal string')
         self.__gender = value
 
     @property
@@ -52,5 +52,5 @@ class Animal(ABC):
         if type(value) is not int:
             raise TypeError('money for care must be an integer number')
         if value < 0:
-            raise ValueError('money for care must a positive number')
+            raise ValueError('money for care must mammal positive number')
         self.__money_for_care = value
