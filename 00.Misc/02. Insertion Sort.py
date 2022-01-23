@@ -27,31 +27,27 @@ def insertion_sort2(arr):
     for i in arr:
         if not sorted_arr:
             sorted_arr.append(arr[0])
+            length_sorted += 1
             continue
 
         for j in range(length_sorted - 1, -1, -1):
-            if arr[i] > sorted_arr[j]:
+            if i > sorted_arr[j]:
                 if j == length_sorted - 1:
-                    sorted_arr.append(arr[i])
+                    sorted_arr.append(i)
                     length_sorted += 1
                     break
 
                 bigger_than_i = [sorted_arr[k] for k in range(j + 1, length_sorted)]
                 sorted_arr = [sorted_arr[L] for L in range(j + 1)]
-                sorted_arr.append(arr[i])
+                sorted_arr.append(i)
                 sorted_arr.extend(bigger_than_i)
                 length_sorted += 1
                 break
 
             if j == 0:
                 temp = [k for k in sorted_arr]
-                sorted_arr = [arr[i]]
+                sorted_arr = [i]
                 sorted_arr.extend(temp)
                 length_sorted += 1
 
     return sorted_arr
-
-
-aroo = [-2, 7, 15, -14, 0, 15, 0, 7, -7, -4, -13, 5, 8, -14, 12]
-print(insertion_sort2(aroo))
-print(sorted(aroo))
