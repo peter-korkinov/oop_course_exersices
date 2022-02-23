@@ -20,6 +20,6 @@ for column in range(m):
     for row in range(n):
         line += matrix[row][column]
 
-res = re.sub('(?<=a-zA-Z0-9)^a-zA-Z0-9+(?=a-zA-Z0-9)', '00', line)
+res = re.sub('(?<=\w)\W+(?=\w)', ' ', line)
 
 print(res)
